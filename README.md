@@ -110,19 +110,19 @@ $$
 
 ## 5. Integration of Vasicek and Variance-Gamma Models
 
-The Jackpot model combines the Vasicek interest rate process with the Variance-Gamma asset price dynamics. At each time step \( t_j \):
+The Jackpot model combines the Vasicek interest rate process with the Variance-Gamma asset price dynamics. At each time step $$\( t_j \)$$:
 
-1. **Simulate** \( r(t_j) \) using the Vasicek model:
+**Simulate** $$\( r(t_j) \)$$ using the Vasicek model:
 
-   <p align="center">
-   <img src="https://render.githubusercontent.com/render/math?math=r(t_j) = r(t_{j-1}) + a (\mu_r - r(t_{j-1})) \Delta t + \sigma_r \sqrt{\Delta t} Z_j">
-   </p>
+$$
+r(t_j) = r(t_{j-1}) + a (\mu_r - r(t_{j-1})) \Delta t + \sigma_r \sqrt{\Delta t} Z_j
+$$
 
-2. **Update** \( S(t_j) \) using the Variance-Gamma model:
+**Update** $$\( S(t_j) \)$$ using the Variance-Gamma model:
 
-   <p align="center">
-   <img src="https://render.githubusercontent.com/render/math?math=S(t_j) = S(t_{j-1}) e^{\left( r(t_{j-1}) + \frac{\ln(1 - 0.15\sigma^2 / 2)}{0.15} \right) \Delta t + \sigma \sqrt{Y_j} X_j}">
-   </p>
+$$
+S(t_j) = S(t_{j-1}) e^{\left( r(t_{j-1}) + \frac{\ln(1 - 0.15\sigma^2 / 2)}{0.15} \right) \Delta t + \sigma \sqrt{Y_j} X_j}.
+$$
 
 
 This integration ensures consistency between the stochastic processes of interest rates and asset prices.
