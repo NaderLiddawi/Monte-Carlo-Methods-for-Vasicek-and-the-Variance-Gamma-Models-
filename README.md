@@ -100,7 +100,7 @@ where:
 - $$\( \hat{\sigma} \)$$: The standard deviation of the simulated payoffs.
 - $$\( z_{\alpha/2} \)$$: The critical value for a given confidence level (e.g., 2.58 for 99%).
 
-To achieve a target error tolerance \( \epsilon \), the required sample size \( n \) is:
+To achieve a target error tolerance $$\( \epsilon \)$$, the required sample size \( n \) is:
 
 $$
 n \geq \left( \frac{z_{\alpha/2} \hat{\sigma}}{\epsilon} \right)^2.
